@@ -4,6 +4,8 @@
 
 ### Author: Kale Lesko
 
+// storeName: faker.company.companyName(),
+
 ### Links and Resources
 
 - [ci/cd](http://xyz.com) (GitHub Actions)

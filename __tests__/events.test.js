@@ -8,7 +8,7 @@ afterAll(() => {
 });
 
 let fake = {
-  storeName: 'store name',
+  store: 'store name',
   orderId: 'order',
   customerName: 'name',
   address: 'address',
@@ -18,14 +18,14 @@ let fake = {
 describe('should test vendor.js console log', () => {
 
   it('checks new order console.logs', () => {
-    vendor.start(fake);
+    vendor(fake);
     setTimeout(() => {
       expect(logSpy).toHaveBeenCalled()
     }, 6000)
   });
 
   it('checks delievered console.logs', () => {
-    vendor.delievered(fake);
+    vendor.delivered(fake);
     expect(logSpy).toHaveBeenCalled();
   });
 
