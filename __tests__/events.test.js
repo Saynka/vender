@@ -1,4 +1,4 @@
-const vendor = require('../modules/event.js');
+const vendor = require('../vender.js');
 
 
 let logSpy = jest.spyOn(console, 'log').mockImplementation();
