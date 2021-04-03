@@ -2,10 +2,10 @@
   "name": "vender",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "vender.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "node index.js"
+    "start": "node vender.js"
   },
   "repository": {
     "type": "git",

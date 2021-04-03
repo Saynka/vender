@@ -1,13 +1,19 @@
 'use strict';
-// require('../index.js');
 
-const socket = require('../index.js');
+const io = require('socket.io-client');
+const host = 'http://localhost:3000/caps';
 const faker = require('faker');
 const socket = io.connect(host);
 const venderSocket = io.connect(`${host}/caps`);
+require('dotenv').config();
 
-socket.on('start', newOrder);
-socket.on('delivered', delievered);
+
+venderSocket.emit('start');
+
+
+venderSocket.on('start', newOrder);
+venderSocket.on('delivered', delievered);
+
 
 function newOrder() {
   setInterval(() => {
@@ -33,7 +39,14 @@ function delievered(payload) {
   console.log(`PACKAGE DELIEVERED ${payload.orderId} ON ${new Date()}`)
 }
 
+
+
+
 module.exports = {
   start: newOrder,
   delievered: delievered
 }
+
+
+
+
